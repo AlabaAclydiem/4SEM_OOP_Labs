@@ -3,14 +3,34 @@
 
 #include <bits/stdc++.h>
 #include <SFML/Graphics.hpp>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 enum Resolution {
-    WIDTH_SMALL = 800,
-    HEIGHT_SMALL = 450,
-    WIDTH_MEDIUM = 1200,
-    HEIGHT_MEDIUM = 675,
-    WIDTH_BIG = 1600,
-    HEIGHT_BIG = 900,
+    W0 = 1920,
+    H0 = 1000,
+
+    W1 = 1600,
+    H1 = 900,
+    
+    W2 = 1560,
+    H2 = 877,
+
+    W3 = 1520,
+    H3 = 720,
+
+    W4 = 1480,
+    H4 = 720,
+
+    W5 = 1366,
+    H5 = 768,
+
+    W6 = 1280,
+    H6 = 720,
+
+    W7 = 800,
+    H7 = 450,
 };
 
 enum Active {
@@ -18,17 +38,25 @@ enum Active {
     SETTINGS,
     GAME,
     PAUSE,
+    MESSAGE_START,
+    MESSAGE_WIN,
+    MESSAGE_LOSE
+};
+
+enum Coefficients {
+    BALL_COEF = 1,
+    PLATFORM_COEF = 1,
 };
 
 enum PlatformSize {
-    PS_SHORT = 50,
-    PS_MEDIUM = 75,
-    PS_LONG = 100,
-    PS_HEIGHT = 15,
+    PS_SHORT = 75,
+    PS_MEDIUM = 100,
+    PS_LONG = 150,
+    PS_HEIGHT = 20,
 };
 
 enum BallSize {
-    BS_MEDIUM = 15,
+    BS_MEDIUM = 10,
 };
 
 enum ObstacleNum {
@@ -42,6 +70,10 @@ enum Difficulty {
     DF_EASY = 1,
 };
 
+enum BonusSpeed {
+    BSSP_MEDIUM = 4,
+};
+
 enum PlatformSpeed {
     PSP_FAST = 12,
     PSP_MEDIUM = 10,
@@ -49,9 +81,9 @@ enum PlatformSpeed {
 };
 
 enum BallSpeed {
-    BSP_FAST = 100,
+    BSP_FAST = 110,
     BSP_MEDIUM = 75,
-    BSP_SLOW = 50,
+    BSP_SLOW = 40,
 };
 
 enum EventType {
@@ -65,15 +97,34 @@ enum EventType {
     SWITCH_RESOLUTION,
     DESTROY,
     FALL,
+    BONUS_FALL,
     HORIZONTAL_COLLISION,
     VERTICAL_COLLISION,
     COLLISION,
     TO_PAUSE,
     TO_GAME,
     SAVE,
+    LOAD,
     FRAME,
     SCORE_UP,
     LIVES_DOWN,
+    END_GAME,
+    WIN,
+    LOSE,
+    START,
+    BONUS,
+    PLATFORM_FASTEN_DECLINE,
+    PLATFORM_SLOWEN_DECLINE,
+    PLATFORM_SHORTEN_DECLINE,
+    PLATFORM_LONGEN_DECLINE,
+    BALL_FASTEN_DECLINE,
+    BALL_SLOWEN_DECLINE,
+    PLATFORM_FASTEN = 101,
+    PLATFORM_SLOWEN = 102,
+    PLATFORM_SHORTEN = 103,
+    PLATFORM_LONGEN = 104,
+    BALL_FASTEN = 105,
+    BALL_SLOWEN = 106,
 };
 
 class DisplayObject;
@@ -83,18 +134,45 @@ struct Event {
     DisplayObject* obj;
 };
 
-class DisplayObject : public sf::RectangleShape {
+class SaveloadObject {
+public:
+    virtual void to_string(std::stringstream &strStream)=0;
+    virtual SaveloadObject* from_string(std::stringstream &strStream)=0;
+    virtual json to_json()=0;
+    virtual SaveloadObject* from_json(json &deri)=0;
+};
+
+class DisplayObject : public SaveloadObject {
 protected:
+    sf::Shape* shape;
     sf::Color color;
     sf::FloatRect bounds;
     bool visible;
     sf::Vector2f position;
-    DisplayObject(sf::Vector2f size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255, 255, 255)) : sf::RectangleShape(size) {
+    DisplayObject(sf::Vector2f size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255, 255, 255)) {
+        shape = new sf::RectangleShape(size);
+        shape->setFillColor(col);
+        color = col;
+        shape->setPosition(pos);
+        position = pos;
+        bounds = shape->getGlobalBounds();
+        visible = true;
+        /*
         this->setFillColor(col);
         color = col;
         this->setPosition(pos);
         position = pos;
         bounds = this->getGlobalBounds();
+        visible = true;
+        */
+    };
+    DisplayObject(float size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255, 255, 255)) {
+        shape = new sf::CircleShape(size);
+        shape->setFillColor(col);
+        color = col;
+        shape->setPosition(pos);
+        position = pos;
+        bounds = shape->getGlobalBounds();
         visible = true;
     };
 public:
@@ -106,38 +184,63 @@ public:
     virtual void eventHandler(Event e);
     virtual void checkBounds();
     virtual sf::FloatRect getBound();
+    virtual void scaleBound(sf::Vector2f koef) { 
+        shape->setPosition(sf::Vector2f(bounds.left * koef.x, bounds.top * koef.y));
+        shape->setScale(koef);
+        bounds = shape->getGlobalBounds();
+        position = shape->getPosition(); 
+    }
+    virtual void to_string(std::stringstream &strStream) override {}
+    virtual SaveloadObject* from_string(std::stringstream &strStream) override { return nullptr; }
+    virtual json to_json() override { return json{}; }
+    virtual SaveloadObject* from_json(json &deri) override { return nullptr; }
+    virtual void scale(float k) { shape->scale(sf::Vector2f(k, 1)); bounds = shape->getGlobalBounds(); position = shape->getPosition(); }
 };
 
 class MovableObject : public DisplayObject {
 protected:
-    sf::Vector2f velocity;
+    sf::Vector2f velocity, base_vel;
+    float scale_coef = 1;
     MovableObject(sf::Vector2f size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255), sf::Vector2f vel = sf::Vector2f(0, 0)) : DisplayObject(size, pos, col) {
         velocity = vel;
+        base_vel = sf::Vector2f(abs(vel.x), abs(vel.y));
+    }
+    MovableObject(float size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255), sf::Vector2f vel = sf::Vector2f(0, 0)) : DisplayObject(size, pos, col) {
+        velocity = vel;
+        base_vel = sf::Vector2f(abs(vel.x), abs(vel.y));
     }
 public:
     virtual void move();
     virtual void move(sf::Vector2f vel);
     virtual void setVelocity(sf::Vector2f vel);
     virtual sf::Vector2f getVelocity();
+    virtual void setScale() { velocity *= scale_coef; }
+    virtual void scaleSpeed(float k) { scale_coef *= k; velocity = sf::Vector2f(velocity.x / abs(velocity.x) * base_vel.x, velocity.y / abs(velocity.y) * base_vel.y); }
 };
 
-class Statistics {
+class Statistics : public SaveloadObject {
 private:
     int lives, score;
     float delay;
     std::string name;
-    sf::Clock clock;
+    sf::Clock* clock;
 public:
-    Statistics(int l, int s, sf::Time t, std::string n, float delay);
+    Statistics(int l, int s, std::string n, float delay);
     int getLives();
     int getScore();
     std::string getName();
     float getTime();
+    sf::Clock* getClock() { return clock; };
     void setLives(int num);
     void setScore(int score);
+    void setDelay(float d) { delay += d; }
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
-class TextBlock : public DisplayObject{
+class TextBlock : public DisplayObject {
 private:
     sf::Text *text;
 public:
@@ -148,23 +251,41 @@ public:
 
 class Ball : public MovableObject {
 public:
-    Ball(float size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255), sf::Vector2f vel = sf::Vector2f(0, 0)) : MovableObject(sf::Vector2f(size, size), pos, col, vel) {};
+    Ball(float size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255), sf::Vector2f vel = sf::Vector2f(0, 0)) : MovableObject(size, pos, col, vel) {};
     std::pair <Ball*, Ball*> mitosis();
     void eventHandler(Event e) override;
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
+    int getBaseSpeedAbs(Difficulty diff);
 };
 
 class Platform : public MovableObject {
 public:
     Platform(sf::Vector2f size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255), float vel = 0) : MovableObject(size, pos, col, sf::Vector2f (vel, 0)) {};
     void eventHandler(Event e) override;
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
+    float getBaseSpeedAbs();
 };
 
-class Bonus {
+class Bonus : public MovableObject {
 private:
     EventType bonus;
 public:
-    Bonus();
-    void sendEvent();
+    Bonus(sf::Vector2f size, sf::Vector2f pos, float vel);
+    void setBonus(EventType e);
+    EventType getBonus() { return bonus; }
+    void checkCollision(DisplayObject* obj) override;
+    void checkBounds() override;
+    void eventHandler(Event e) override;
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
 class Obstacle : public DisplayObject {
@@ -173,6 +294,13 @@ private:
 public:
     Obstacle(sf::Vector2f size, sf::Vector2f pos, sf::Color col);
     void eventHandler(Event e) override;
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
+    std::vector<Bonus*> getBonuses() { return bonuses; }
+    void addBonus(Bonus* bonus) { bonuses.push_back(bonus); }
+    void clearBonuses() { bonuses.clear(); }
 };
 
 class Button : public DisplayObject {
@@ -200,16 +328,16 @@ public:
 
 class MessageBox : public DisplayObject {
 private:
-    Button* cancel;
+    Button* button;
     TextBlock* text;
 public:
-    MessageBox(sf::Vector2f size, sf::Vector2f pos = sf::Vector2f(0, 0), sf::Color col = sf::Color(255,255,255));
+    MessageBox(EventType event, std::string str, sf::Vector2f size);
     void draw(sf::RenderWindow &target) override;
-    void setVisible(bool state) override;
-    void setText(std::string text);
+    void setText(std::string str);
+    void update(sf::Vector2i mousePos, bool pressed);
 };
 
-class Settings {
+class Settings : public SaveloadObject {
 private:
     static Difficulty difficulty;
     static std::pair <Resolution, Resolution> resolution;
@@ -219,8 +347,13 @@ public:
     void setDiff(Difficulty diff);
     static std::pair<Resolution, Resolution> getResolution();
     void setResolution(std::string str);
+    void setResolution(std::pair<Resolution, Resolution> res) { resolution = res; }
     static std::string getDiffStr();
     static std::string getResolutionStr();
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
 class Menu : public DisplayObject {
@@ -239,10 +372,12 @@ private:
     Statistics* data;
     MessageBox* message;
     StatusBar* board;
+    std::map<sf::Clock*, std::pair<float, EventType>> bonus_timers;
     std::vector<DisplayObject*> objects;
     std::vector<MovableObject*> move_objects;
     std::vector<Ball*> balls;
     std::vector<Platform*> platforms;
+    std::vector<Bonus*> bonuses;
     void eventHandler(Event e) override;
     void moveObjects();
     void checkCollisions();
@@ -254,12 +389,19 @@ public:
     void addItem(Platform *obj);
     void addItem(Statistics *obj);
     void addItem(StatusBar* obj);
+    void addTimer(std::pair<float, EventType> data) { bonus_timers[new sf::Clock()] = data; }
     Statistics* getData();
+    void freezeTimers();
+    void startTimers();
     void update(sf::Vector2i mousePos, bool pressed);
     std::vector<DisplayObject*> getObjects();
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
-class Player {
+class Player : public SaveloadObject {
 private:
     Statistics *stats;
     Platform *platform;
@@ -270,42 +412,58 @@ public:
     Platform* getPlatform();
     Statistics* getStatistics();
     std::vector <Ball*> getBalls();
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
-class Players {
+class Players : public SaveloadObject {
 private:
     std::vector <Player*> players;
 public:
     Players();
     void addPlayer(Player *player);
     std::vector <Player*> getPlayers();
+    void to_string(std::stringstream &strStream) override;
+    SaveloadObject* from_string(std::stringstream &strStream) override;
+    json to_json() override;
+    SaveloadObject* from_json(json &deri) override;
 };
 
 class Game;
 
-class History {
-private:
-    std::ifstream inFile;
-    std::ofstream outFile;
+class SerializeProxy {
 public:
-    void load(Game* game);
-    void save(Game* game);
+    std::string to_string(std::vector <SaveloadObject*> &toSave);
+    json to_json(std::vector <SaveloadObject*> &toSave);
+    void from_string(std::vector <SaveloadObject*> &toLoad, std::stringstream &strStream);
+    void from_json(std::vector <SaveloadObject*> &toLoad, json &deri);
 };
 
 class Game {
-    friend class History;
+    friend class SerializeProxy;
 private:
+    std::ifstream inFile;
+    std::ofstream outFile;
+    std::vector <SaveloadObject*> toSave;
     sf::Clock timer;
     Active state;
-    History* history;
+    SerializeProxy* history;
     sf::RenderWindow *window;
     Players *sessionPlayers;
-    Menu *menu, *settingsMenu, *pauseMenu;
+    Menu /** *menu ,*/ *settingsMenu, *pauseMenu; // Change pausenames if all works
+    MessageBox* start, *win, *lose;
     Settings *settings;
     GameField *gameField;
     void update();
     void eventHandler(Event e);
     void initMenus();
+    void reinit();
+    void load();
+    void load_json();
+    void save(std::vector <SaveloadObject*> toSave);
+    void save_json(std::vector <SaveloadObject*> toSave);
 public:
     Game();
     void create();

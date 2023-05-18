@@ -1,620 +1,1879 @@
-{
-    "difficulty": 2,
-    "obstacle": [
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 52.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 123.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 194.625
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 265.875
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 337.125
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85713958740234,
-            "x": 5.714285850524902,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 120.0,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": false,
-            "width": 102.85714721679688,
-            "x": 234.28570556640625,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 348.5714416503906,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85714721679688,
-            "x": 462.8571472167969,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": false,
-            "width": 102.85711669921875,
-            "x": 577.142822265625,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 691.4285888671875,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 805.7142944335938,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.85711669921875,
-            "x": 920.0,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1034.28564453125,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1148.5714111328125,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1262.8570556640625,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": true,
-            "width": 102.857177734375,
-            "x": 1377.1429443359375,
-            "y": 408.375
-        },
-        {
-            "height": 57.0,
-            "visible": false,
-            "width": 102.857177734375,
-            "x": 1491.4285888671875,
-            "y": 408.375
-        }
-    ],
-    "player": [
-        {
-            "ball": [
-                {
-                    "velocity_x": 7.511826992034912,
-                    "velocity_y": 6.600943565368652,
-                    "x": 855.5992431640625,
-                    "y": 727.2091674804688
-                }
-            ],
-            "platform": {
-                "velocity": 10.0,
-                "x": 170.0,
-                "y": 887.0
-            },
-            "statistics": {
-                "lives": 3,
-                "name": "Artur",
-                "score": 30,
-                "time": 8.30243968963623
+[
+    {
+        "settings": {
+            "difficulty": 3,
+            "resolution": {
+                "height": 1000,
+                "width": 1920
             }
         }
-    ],
-    "resolution": {
-        "height": 900,
-        "width": 1600
+    },
+    {
+        "players": [
+            {
+                "player": {
+                    "balls": [
+                        {
+                            "ball": {
+                                "radius": 10.0,
+                                "scale": 1.0,
+                                "visible": true,
+                                "x": 886.8131103515625,
+                                "x_velocity": -7.902927398681641,
+                                "y": 644.3787841796875,
+                                "y_velocity": 9.194766998291016
+                            }
+                        }
+                    ],
+                    "balls_num": 1,
+                    "platform": {
+                        "height": 20.0,
+                        "scale": 1.0,
+                        "width": 288.0,
+                        "x": 588.0,
+                        "x_velocity": -12.0,
+                        "y": 980.0
+                    },
+                    "statistics": {
+                        "lives": 2,
+                        "name": "Artur",
+                        "score": 80,
+                        "time": 8.911019325256348
+                    }
+                }
+            }
+        ],
+        "players_num": 1
+    },
+    {
+        "gamefield": {
+            "obstacles": [
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 105,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 5.3333330154418945,
+                                    "y": 55.9375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1712.0,
+                                    "y": 55.9375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 55.9375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 5.3333330154418945,
+                                    "y": 115.3125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 645.3333129882813,
+                                    "y": 115.3125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 858.6666870117188,
+                                    "y": 115.3125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 101,
+                                    "visible": true,
+                                    "width": 95.99993896484375,
+                                    "x": 965.3333129882813,
+                                    "y": 115.3125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1072.0,
+                                    "y": 115.3125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 115.3125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 102,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 112.0,
+                                    "y": 174.6875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 325.3333435058594,
+                                    "y": 174.6875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 105,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1285.3333740234375,
+                                    "y": 174.6875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1818.666748046875,
+                                    "y": 174.6875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 174.6875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 102,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1178.666748046875,
+                                    "y": 234.0625,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 104,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1605.3333740234375,
+                                    "y": 234.0625,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 234.0625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 105,
+                                    "visible": true,
+                                    "width": 96.00001525878906,
+                                    "x": 218.6666717529297,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 752.0000610351563,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 95.99993896484375,
+                                    "x": 965.3333129882813,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 102,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1285.3333740234375,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1605.3333740234375,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1712.0,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1818.666748046875,
+                                    "y": 293.4375,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 293.4375
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 105,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 5.3333330154418945,
+                                    "y": 352.8125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 101,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 645.3333129882813,
+                                    "y": 352.8125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 104,
+                                    "visible": true,
+                                    "width": 95.99993896484375,
+                                    "x": 965.3333129882813,
+                                    "y": 352.8125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 105,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1285.3333740234375,
+                                    "y": 352.8125,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 352.8125
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 102,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 432.0,
+                                    "y": 412.1875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 106,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 645.3333129882813,
+                                    "y": 412.1875,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 412.1875
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 5.3333330154418945,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 103,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 112.0,
+                                    "y": 471.5625,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 112.0,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.00001525878906,
+                        "x": 218.6666717529297,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 104,
+                                    "visible": false,
+                                    "width": 96.0,
+                                    "x": 325.3333435058594,
+                                    "y": 935.5625,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 325.3333435058594,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 432.0,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 538.6666870117188,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 645.3333129882813,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 752.0000610351563,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 858.6666870117188,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 95.99993896484375,
+                        "x": 965.3333129882813,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1072.0,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1178.666748046875,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 1285.3333740234375,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 1392.0,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": false,
+                        "width": 96.0,
+                        "x": 1498.666748046875,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1605.3333740234375,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses_num": 0,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1712.0,
+                        "y": 471.5625
+                    }
+                },
+                {
+                    "obstacle": {
+                        "bonuses": [
+                            {
+                                "bonus": {
+                                    "height": 47.5,
+                                    "type": 102,
+                                    "visible": true,
+                                    "width": 96.0,
+                                    "x": 1818.666748046875,
+                                    "y": 471.5625,
+                                    "y_velocity": 4.0
+                                }
+                            }
+                        ],
+                        "bonuses_num": 1,
+                        "height": 47.5,
+                        "visible": true,
+                        "width": 96.0,
+                        "x": 1818.666748046875,
+                        "y": 471.5625
+                    }
+                }
+            ],
+            "timers": [
+                {
+                    "event": 29,
+                    "time_left": 4.247122764587402
+                }
+            ]
+        },
+        "gamefield_obstacles_num": 144,
+        "gamefield_timers_num": 1
     }
-}
+]

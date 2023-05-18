@@ -1,178 +1,467 @@
-Difficulty
-2
-Resolution
-1600 900
-Statistics
-3 30 8.302150 Artur
-Platform
-170.000000 887.000000 10.000000
-Ball
-855.599243 727.209167 7.511827 6.600944
-Obstacle
-5.714286 52.125000 102.857140 57.000000 1
-Obstacle
-120.000000 52.125000 102.857147 57.000000 1
-Obstacle
-234.285706 52.125000 102.857147 57.000000 1
-Obstacle
-348.571442 52.125000 102.857147 57.000000 1
-Obstacle
-462.857147 52.125000 102.857147 57.000000 1
-Obstacle
-577.142822 52.125000 102.857117 57.000000 1
-Obstacle
-691.428589 52.125000 102.857117 57.000000 1
-Obstacle
-805.714294 52.125000 102.857117 57.000000 1
-Obstacle
-920.000000 52.125000 102.857117 57.000000 1
-Obstacle
-1034.285645 52.125000 102.857178 57.000000 1
-Obstacle
-1148.571411 52.125000 102.857178 57.000000 1
-Obstacle
-1262.857056 52.125000 102.857178 57.000000 1
-Obstacle
-1377.142944 52.125000 102.857178 57.000000 1
-Obstacle
-1491.428589 52.125000 102.857178 57.000000 1
-Obstacle
-5.714286 123.375000 102.857140 57.000000 1
-Obstacle
-120.000000 123.375000 102.857147 57.000000 1
-Obstacle
-234.285706 123.375000 102.857147 57.000000 1
-Obstacle
-348.571442 123.375000 102.857147 57.000000 1
-Obstacle
-462.857147 123.375000 102.857147 57.000000 1
-Obstacle
-577.142822 123.375000 102.857117 57.000000 1
-Obstacle
-691.428589 123.375000 102.857117 57.000000 1
-Obstacle
-805.714294 123.375000 102.857117 57.000000 1
-Obstacle
-920.000000 123.375000 102.857117 57.000000 1
-Obstacle
-1034.285645 123.375000 102.857178 57.000000 1
-Obstacle
-1148.571411 123.375000 102.857178 57.000000 1
-Obstacle
-1262.857056 123.375000 102.857178 57.000000 1
-Obstacle
-1377.142944 123.375000 102.857178 57.000000 1
-Obstacle
-1491.428589 123.375000 102.857178 57.000000 1
-Obstacle
-5.714286 194.625000 102.857140 57.000000 1
-Obstacle
-120.000000 194.625000 102.857147 57.000000 1
-Obstacle
-234.285706 194.625000 102.857147 57.000000 1
-Obstacle
-348.571442 194.625000 102.857147 57.000000 1
-Obstacle
-462.857147 194.625000 102.857147 57.000000 1
-Obstacle
-577.142822 194.625000 102.857117 57.000000 1
-Obstacle
-691.428589 194.625000 102.857117 57.000000 1
-Obstacle
-805.714294 194.625000 102.857117 57.000000 1
-Obstacle
-920.000000 194.625000 102.857117 57.000000 1
-Obstacle
-1034.285645 194.625000 102.857178 57.000000 1
-Obstacle
-1148.571411 194.625000 102.857178 57.000000 1
-Obstacle
-1262.857056 194.625000 102.857178 57.000000 1
-Obstacle
-1377.142944 194.625000 102.857178 57.000000 1
-Obstacle
-1491.428589 194.625000 102.857178 57.000000 1
-Obstacle
-5.714286 265.875000 102.857140 57.000000 1
-Obstacle
-120.000000 265.875000 102.857147 57.000000 1
-Obstacle
-234.285706 265.875000 102.857147 57.000000 1
-Obstacle
-348.571442 265.875000 102.857147 57.000000 1
-Obstacle
-462.857147 265.875000 102.857147 57.000000 1
-Obstacle
-577.142822 265.875000 102.857117 57.000000 1
-Obstacle
-691.428589 265.875000 102.857117 57.000000 1
-Obstacle
-805.714294 265.875000 102.857117 57.000000 1
-Obstacle
-920.000000 265.875000 102.857117 57.000000 1
-Obstacle
-1034.285645 265.875000 102.857178 57.000000 1
-Obstacle
-1148.571411 265.875000 102.857178 57.000000 1
-Obstacle
-1262.857056 265.875000 102.857178 57.000000 1
-Obstacle
-1377.142944 265.875000 102.857178 57.000000 1
-Obstacle
-1491.428589 265.875000 102.857178 57.000000 1
-Obstacle
-5.714286 337.125000 102.857140 57.000000 1
-Obstacle
-120.000000 337.125000 102.857147 57.000000 1
-Obstacle
-234.285706 337.125000 102.857147 57.000000 1
-Obstacle
-348.571442 337.125000 102.857147 57.000000 1
-Obstacle
-462.857147 337.125000 102.857147 57.000000 1
-Obstacle
-577.142822 337.125000 102.857117 57.000000 1
-Obstacle
-691.428589 337.125000 102.857117 57.000000 1
-Obstacle
-805.714294 337.125000 102.857117 57.000000 1
-Obstacle
-920.000000 337.125000 102.857117 57.000000 1
-Obstacle
-1034.285645 337.125000 102.857178 57.000000 1
-Obstacle
-1148.571411 337.125000 102.857178 57.000000 1
-Obstacle
-1262.857056 337.125000 102.857178 57.000000 1
-Obstacle
-1377.142944 337.125000 102.857178 57.000000 1
-Obstacle
-1491.428589 337.125000 102.857178 57.000000 1
-Obstacle
-5.714286 408.375000 102.857140 57.000000 1
-Obstacle
-120.000000 408.375000 102.857147 57.000000 1
-Obstacle
-234.285706 408.375000 102.857147 57.000000 0
-Obstacle
-348.571442 408.375000 102.857147 57.000000 1
-Obstacle
-462.857147 408.375000 102.857147 57.000000 1
-Obstacle
-577.142822 408.375000 102.857117 57.000000 0
-Obstacle
-691.428589 408.375000 102.857117 57.000000 1
-Obstacle
-805.714294 408.375000 102.857117 57.000000 1
-Obstacle
-920.000000 408.375000 102.857117 57.000000 1
-Obstacle
-1034.285645 408.375000 102.857178 57.000000 1
-Obstacle
-1148.571411 408.375000 102.857178 57.000000 1
-Obstacle
-1262.857056 408.375000 102.857178 57.000000 1
-Obstacle
-1377.142944 408.375000 102.857178 57.000000 1
-Obstacle
-1491.428589 408.375000 102.857178 57.000000 0
+Settings
+	Difficulty 2
+	Resolution
+		Width 1920
+		Height 1000
+Players
+	PlayersNum 1
+	Player
+		Statistics
+			Lives 3
+			Score 0
+			Time 0.06452
+			Name Artur
+		Platform
+			X 864
+			Y 980
+			Width 192
+			Height 20
+			XVelocity 12
+		Balls
+			BallsNum 1
+			Ball
+				X 974.915
+				Y 941.694
+				Radius 10
+				XVelocity 6.39437
+				YVelocity -7.68843
+				Visible 1
+Gamefield
+	ObstaclesNum 44
+	TimersNum 0	Obstacle
+		X 8.72727
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 183.273
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 102
+			X 183.273
+			Y 61.875
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 357.818
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 532.364
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 706.909
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 102
+			X 706.909
+			Y 61.875
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 881.455
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1056
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1230.55
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 101
+			X 1230.55
+			Y 61.875
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 1405.09
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1579.64
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1754.18
+		Y 61.875
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 101
+			X 1754.18
+			Y 61.875
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 8.72727
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 183.273
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 101
+			X 183.273
+			Y 180.625
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 357.818
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 357.818
+			Y 180.625
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 532.364
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 101
+			X 532.364
+			Y 180.625
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 706.909
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 881.455
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 102
+			X 881.455
+			Y 180.625
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 1056
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1230.55
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 1230.55
+			Y 180.625
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 1405.09
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1579.64
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1754.18
+		Y 180.625
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 8.72727
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 183.273
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 183.273
+			Y 299.375
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 357.818
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 532.364
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 532.364
+			Y 299.375
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 706.909
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 881.455
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1056
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 1056
+			Y 299.375
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 1230.55
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1405.09
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1579.64
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1754.18
+		Y 299.375
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 8.72727
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 183.273
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 357.818
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 101
+			X 357.818
+			Y 418.125
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 532.364
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 105
+			X 532.364
+			Y 418.125
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 706.909
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 881.455
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1056
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1230.55
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 102
+			X 1230.55
+			Y 418.125
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+	Obstacle
+		X 1405.09
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1579.64
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 0
+	Obstacle
+		X 1754.18
+		Y 418.125
+		Width 157.091
+		Height 95
+		Visible 1
+		BonusesNum 1
+		Bonus
+			Type 104
+			X 1754.18
+			Y 418.125
+			Width 157.091
+			Height 95
+			YVelocity 4
+			Visible 1
+
