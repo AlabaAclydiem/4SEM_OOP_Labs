@@ -90,11 +90,12 @@ sf::Vector2f MovableObject::getVelocity() {
     return velocity;
 }
 
-Statistics::Statistics(int l, int s, std::string n, float d = 0) {
+Statistics::Statistics(int l, int s, int c, std::string n, float d = 0) {
     lives = l;
     score = s;
     name = n;
     delay = d;
+    catched = c;
     clock = new sf::Clock();
 }
 
@@ -123,15 +124,15 @@ void Statistics::setScore(int num) {
 }
 
 void Statistics::to_string(std::stringstream &strStream) {
-    strStream << "\t\tStatistics\n" << "\t\t\tLives " << lives << "\n\t\t\tScore " << score << "\n\t\t\tTime " << delay << "\n\t\t\tName " << name << '\n'; 
+    strStream << "\t\tStatistics\n" << "\t\t\tLives " << lives << "\n\t\t\tScore " << score << "\n\t\t\tTime " << delay << "\n\t\t\tName " << name << "\n\t\t\tBonusesCatched " << catched << '\n'; 
 }
 
 SaveloadObject* Statistics::from_string(std::stringstream &strStream) {
     std::string temp, name;
-    int lives, score;
+    int lives, score, catched;
     float delay;
-    strStream >> temp >> temp >> lives >> temp >> score >> temp >> delay >> temp >> name;
-    Statistics* stats = new Statistics(lives, score, name, delay);
+    strStream >> temp >> temp >> lives >> temp >> score >> temp >> delay >> temp >> name >> temp >> catched;
+    Statistics* stats = new Statistics(lives, score, catched, name, delay);
     return stats;
 }
 
@@ -141,18 +142,20 @@ json Statistics::to_json() {
     seri["score"] = score;
     seri["time"] = delay;
     seri["name"] = name;
+    seri["bonuses_catched"] = catched;
     return seri;
 }
 
 SaveloadObject* Statistics::from_json(json &deri) {
-    int lives, score;
+    int lives, score, catched;
     float delay;
     std::string name;
     lives = deri["lives"].get<int>();
     score = deri["score"].get<int>();
     delay = deri["time"].get<float>();
     name = deri["name"].get<std::string>();
-    Statistics* stats = new Statistics(lives, score, name, delay);
+    catched = deri["bonuses_catched"].get<int>();
+    Statistics* stats = new Statistics(lives, score, catched, name, delay);
     return stats;
 }
 
@@ -247,6 +250,10 @@ int Ball::getBaseSpeedAbs(Difficulty diff) {
         return ceil(resolution_coef * BallSpeed::BSP_MEDIUM);
     case (Difficulty::DF_HARD):
         return ceil(resolution_coef * BallSpeed::BSP_FAST);
+    case (Difficulty::DF_HM):
+        return ceil(resolution_coef * BallSpeed::BSP_FM);
+    case (Difficulty::DF_ME):
+        return ceil(resolution_coef * BallSpeed::BSP_MS);
     }
     return 0;
 }
@@ -254,11 +261,14 @@ void Ball::eventHandler(Event e) {
     if (e.obj != this) return;
     float ballSpeed;
     float ballSize = Settings::getResolution().second * BallSize::BS_MEDIUM / 1000;
+    float platformWidth = Settings::getResolution().first * PlatformSize::PS_MEDIUM / 1000;
+    float platformHeight = Settings::getResolution().second * PlatformSize::PS_HEIGHT / 1000;
+    float platformSpeed = Platform(sf::Vector2f(0, 0)).getBaseSpeedAbs();
     switch (e.type) {
     case EventType::FALL:
         shape->setPosition(sf::Vector2f(
-            (Settings::getResolution().first - ballSize) / 2,
-            Settings::getResolution().second / 20 * 19
+            (Settings::getResolution().first - 2 * ballSize) / 2,
+            Settings::getResolution().second - platformHeight - 2 * ballSize
         ));
         move(sf::Vector2f(0, 0));
         EventDispatcher::setGameEvent({EventType::LIVES_DOWN, nullptr});
@@ -354,7 +364,7 @@ std::pair<Ball*, Ball*> Ball::mitosis() {
 Obstacle::Obstacle(sf::Vector2f size, sf::Vector2f pos, sf::Color col) : DisplayObject(size, pos, col) {
     if ((float)unif(rng) < 0.25) {
         bonuses.push_back(new Bonus(size, pos, float(BonusSpeed::BSSP_MEDIUM)));
-        setColor(sf::Color::Green);
+        //setColor(sf::Color::Green);
     }
 }
 
@@ -386,7 +396,7 @@ SaveloadObject* Obstacle::from_string(std::stringstream &strStream) {
     Obstacle* obstacle = new Obstacle(sf::Vector2f(w, h), sf::Vector2f(x, y), sf::Color::Yellow);
     obstacle->clearBonuses();
     obstacle->setColor(sf::Color::Yellow);
-    if (size > 0) obstacle->setColor(sf::Color::Green);
+    //if (size > 0) obstacle->setColor(sf::Color::Green);
     for (int i = 0; i < size; ++i) {
         Bonus* bonus = new Bonus(sf::Vector2f(0, 0), sf::Vector2f(0, 0), 0);
         bonus = (Bonus*)bonus->from_string(strStream);
@@ -421,7 +431,7 @@ SaveloadObject* Obstacle::from_json(json &deri) {
     obstacle->clearBonuses();
     obstacle->setColor(sf::Color::Yellow);
     int size = deri["obstacle"]["bonuses_num"].get<int>();
-    if (size > 0) obstacle->setColor(sf::Color::Green);
+    //if (size > 0) obstacle->setColor(sf::Color::Green);
     for (int i = 0; i < size; ++i) {
         Bonus* bonus = new Bonus(sf::Vector2f(0, 0), sf::Vector2f(0, 0), 0);
         bonus = (Bonus*)bonus->from_json(deri["obstacle"]["bonuses"][i]);
@@ -468,7 +478,7 @@ StatusBar::StatusBar(sf::Vector2f size, Statistics* stats) : DisplayObject(size,
     );
 
     bar.push_back(new TextBlock(
-        sf::Vector2f(Settings::getResolution().first / 10, Settings::getResolution().second / 20),
+        sf::Vector2f(Settings::getResolution().first / 15, Settings::getResolution().second / 20),
         sf::Vector2f(Settings::getResolution().first / 15, 0),
         sf::Color::Black,
         "Lives: " + std::to_string(stats->getLives())
@@ -483,14 +493,20 @@ StatusBar::StatusBar(sf::Vector2f size, Statistics* stats) : DisplayObject(size,
     out << std::fixed << std::setprecision(2) << stats->getTime();
     std::string time = out.str();
     bar.push_back(new TextBlock(
-        sf::Vector2f(Settings::getResolution().first / 10, Settings::getResolution().second / 20),
+        sf::Vector2f(Settings::getResolution().first / 15, Settings::getResolution().second / 20),
         sf::Vector2f(Settings::getResolution().first / 15 + (Settings::getResolution().first / 20 + Settings::getResolution().first / 10) * 2, 0),
         sf::Color::Black,
         "Time: " + time
     ));
     bar.push_back(new TextBlock(
-        sf::Vector2f(Settings::getResolution().first / 10, Settings::getResolution().second / 20),
-        sf::Vector2f(Settings::getResolution().first / 15 + (Settings::getResolution().first / 20 + Settings::getResolution().first / 10) * 4, 0),
+        sf::Vector2f(Settings::getResolution().first / 15, Settings::getResolution().second / 20),
+        sf::Vector2f(Settings::getResolution().first / 15 + (Settings::getResolution().first / 20 + Settings::getResolution().first / 10) * 3, 0),
+        sf::Color::Black,
+        "Bonuses Catched: " + std::to_string(stats->getCatched())
+    ));
+    bar.push_back(new TextBlock(
+        sf::Vector2f(Settings::getResolution().first / 15, Settings::getResolution().second / 20),
+        sf::Vector2f(Settings::getResolution().first / 15 + (Settings::getResolution().first / 20 + Settings::getResolution().first / 10) * 4.5, 0),
         sf::Color::Black,
         "Name: " + stats->getName()
     ));
@@ -511,7 +527,8 @@ void StatusBar::update(Statistics* stats, sf::Vector2i mousePos, bool pressed) {
     out << std::fixed << std::setprecision(2) << stats->getTime();
     std::string time = out.str();
     bar[2]->setText("Time: " + time);
-    bar[3]->setText("Name: " + stats->getName());
+    bar[3]->setText("Bonuses Catched: " + std::to_string(stats->getCatched()));
+    bar[4]->setText("Name: " + stats->getName());
 }
 
 void StatusBar::draw(sf::RenderWindow &target) {
@@ -593,6 +610,8 @@ void Settings::setResolution(std::string str) {
         Settings::resolution = {Resolution::W6, Resolution::H6};
     } else if (str == "800x450") {
         Settings::resolution = {Resolution::W7, Resolution::H7};
+    } else if (str == "Fullscreen") {
+        Settings::resolution = {Resolution::FW, Resolution::FH};
     }
 }
 
@@ -630,7 +649,7 @@ SaveloadObject* Settings::from_json(json &deri) {
     settings->setResolution(std::pair<Resolution, Resolution>((Resolution)res.first, (Resolution)res.second));
     return settings;
 }
-
+///!!!
 std::string Settings::getDiffStr() {
     switch (Settings::difficulty) {
     case Difficulty::DF_EASY:
@@ -641,6 +660,12 @@ std::string Settings::getDiffStr() {
         break;
     case Difficulty::DF_HARD:
         return "Difficulty: Hard";
+        break;
+    case Difficulty::DF_ME:
+        return "Difficulty: Mid-Easy";
+        break;
+    case Difficulty::DF_HM:
+        return "Difficulty: Mid-Hard";
         break;
     }
     return "";
@@ -671,6 +696,9 @@ std::string Settings::getResolutionStr() {
         break;
     case (Resolution::W7):
         return "Resolution: 800x450";
+        break;
+    case (Resolution::FW):
+        return "Resolution: Fullscreen";
         break;
     }
     return "";
@@ -887,6 +915,9 @@ void GameField::eventHandler(Event e) {
         move_objects.push_back((MovableObject*)e.obj);
         objects.push_back(e.obj);
         break;
+    case EventType::BONUS_CATCHED:
+        data->setCatched(data->getCatched() + 1);
+        break;
     case EventType::LIVES_DOWN:
         data->setLives(data->getLives() - 1);
         if (data->getLives() <= 0) {
@@ -994,14 +1025,14 @@ Player::Player(std::string name) {
     Ball *ball = new Ball(
         ballSize,
         sf::Vector2f(
-            (Settings::getResolution().first - ballSize) / 2,
-            Settings::getResolution().second / 20 * 19
+            (Settings::getResolution().first - 2 * ballSize) / 2,
+            Settings::getResolution().second - platformHeight - 2 * ballSize
         ),
         sf::Color::Cyan,
         sf::Vector2f(sqrt(ballSpeed / 2.0), sqrt(ballSpeed / 2.0))
     );
     balls.push_back(ball);
-    stats = new Statistics(3, 0, name);
+    stats = new Statistics(3, 0, 0, name);
 }
 
 Platform* Player::getPlatform() {
@@ -1025,7 +1056,7 @@ void Player::to_string(std::stringstream &strStream) {
 SaveloadObject* Player::from_string(std::stringstream &strStream) {
     std::string temp;
     strStream >> temp;
-    Statistics* stats = new Statistics(0, 0, "");
+    Statistics* stats = new Statistics(0, 0, 0, "");
     stats = (Statistics*)stats->from_string(strStream);
     Platform* platform = new Platform(sf::Vector2f(0, 0), sf::Vector2f(0, 0));
     platform = (Platform*)platform->from_string(strStream);
@@ -1053,7 +1084,7 @@ json Player::to_json() {
 }
 
 SaveloadObject* Player::from_json(json &deri) {
-    Statistics* stats = new Statistics(0, 0, "");
+    Statistics* stats = new Statistics(0, 0, 0, "");
     Platform* platform = new Platform(sf::Vector2f(0, 0), sf::Vector2f(0, 0));
     std::vector <Ball*> balls;
     int size = deri["player"]["balls_num"].get<int>();
@@ -1156,7 +1187,7 @@ void Game::eventHandler(Event e) {
             break;
         case EventType::SAVE:
             save(toSave);
-            // save_json(toSave);
+            save_json(toSave);
             break;
         case EventType::WIN:
             init();
@@ -1208,15 +1239,22 @@ void Game::eventHandler(Event e) {
         case EventType::QUIT:
             window->close();
             break;
+            ///!!!
         case EventType::SWITCH_DIFFICULTY:
             {
             Difficulty temp = Settings::getDiff();
             switch (temp) {
             case Difficulty::DF_EASY:
+                settings->setDiff(DF_ME);   
+                break;
+            case Difficulty::DF_ME:
                 settings->setDiff(DF_MEDIUM);   
                 break;
             case Difficulty::DF_MEDIUM:
-                settings->setDiff(DF_HARD);
+                settings->setDiff(DF_HM);
+                break;
+            case Difficulty::DF_HM:
+                settings->setDiff(DF_HARD);   
                 break;
             case Difficulty::DF_HARD:
                 settings->setDiff(DF_EASY);
@@ -1252,6 +1290,9 @@ void Game::eventHandler(Event e) {
                 settings->setResolution("800x450");
                 break;
             case Resolution::W7:
+                settings->setResolution("Fullscreen");
+                break;
+            case Resolution::FW:
                 settings->setResolution("1920x1000");
                 break;
             }
@@ -1327,12 +1368,19 @@ void Game::create() {
     uint64_t timeSeed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
     std::seed_seq ss{uint32_t(timeSeed & 0xffffffff), uint32_t(timeSeed>>32)};
     rng.seed(ss);
-
-    window = new sf::RenderWindow(
-        sf::VideoMode(Settings::getResolution().first, Settings::getResolution().second), 
-        "Arcanoid",
-        sf::Style::Titlebar | sf::Style::Close
-    );
+    if (Settings::getResolution().first == Resolution::FW) {
+        window = new sf::RenderWindow(
+            sf::VideoMode(Settings::getResolution().first, Settings::getResolution().second), 
+            "Arcanoid",
+            sf::Style::Titlebar | sf::Style::Close | sf::Style::Fullscreen
+        );
+    } else {
+        window = new sf::RenderWindow(
+            sf::VideoMode(Settings::getResolution().first, Settings::getResolution().second), 
+            "Arcanoid",
+            sf::Style::Titlebar | sf::Style::Close
+        );
+    }
     window->setKeyRepeatEnabled(false);
 }
 
@@ -1392,8 +1440,8 @@ void Game::reinit() {
 
     std::vector <Obstacle*> blocks;
     sf::Vector2f fullResolution = sf::Vector2f(Settings::getResolution().first, Settings::getResolution().second);
-    int rowNum = ObstacleNum::OB_ROW / (4.5 - Settings::getDiff());
-    int columnNum = ObstacleNum::OB_COLUMN / (4.5 - Settings::getDiff());
+    int rowNum = ObstacleNum::OB_ROW / (6.5 - Settings::getDiff());
+    int columnNum = ObstacleNum::OB_COLUMN / (6.5 - Settings::getDiff());
     float gapWidth = (float)fullResolution.x / columnNum / 20;
     float gapHeight = (float)(fullResolution.y - fullResolution.y / 20) / 2 / rowNum / 10;
     float obstacleWidth = (float)fullResolution.x / columnNum - gapWidth * 2;
@@ -1416,7 +1464,7 @@ void Game::reinit() {
         std::vector<Bonus*> bonuses = ((Obstacle*)(gameField->getObjects()[i]))->getBonuses();
         i++;
         if (bonuses.size() > 0) {
-            block->setColor(sf::Color::Green);
+            //block->setColor(sf::Color::Green);
             for (Bonus* bonus : bonuses) {
                 Bonus* resizedBonus = new Bonus(sf::Vector2f(block->getBound().width, block->getBound().height), sf::Vector2f(block->getBound().left, block->getBound().top), (float)BonusSpeed::BSSP_MEDIUM);
                 resizedBonus->setBonus(bonus->getBonus());
@@ -1456,7 +1504,7 @@ void Game::load() {
     history->from_string(toSave, strStream);
 
     settings = (Settings*)toSave[0];
-    history = new SerializeProxy();
+    history = new Proxy();
 
     sessionPlayers = (Players*)toSave[1];
 
@@ -1501,7 +1549,7 @@ void Game::load_json() {
     history->from_json(toSave, deri);
 
     settings = (Settings*)toSave[0];
-    history = new SerializeProxy();
+    history = new Proxy();
 
     sessionPlayers = (Players*)toSave[1];
 
@@ -1545,7 +1593,7 @@ void Game::init() {
     state = Active::MENU;
     
     settings = new Settings();
-    history = new SerializeProxy();
+    history = new Proxy();
 
     sessionPlayers = new Players();
     sessionPlayers->addPlayer(new Player("Artur"));
@@ -1563,8 +1611,8 @@ void Game::init() {
 
     std::vector <Obstacle*> blocks;
     sf::Vector2f fullResolution = sf::Vector2f(Settings::getResolution().first, Settings::getResolution().second);
-    int rowNum = ObstacleNum::OB_ROW / (4.5 - Settings::getDiff());
-    int columnNum = ObstacleNum::OB_COLUMN / (4.5 - Settings::getDiff());
+    int rowNum = ObstacleNum::OB_ROW / (6.5 - Settings::getDiff());
+    int columnNum = ObstacleNum::OB_COLUMN / (6.5 - Settings::getDiff());
     float gapWidth = (float)fullResolution.x / columnNum / 20;
     float gapHeight = (float)(fullResolution.y - fullResolution.y / 20) / 2 / rowNum / 10;
     float obstacleWidth = (float)fullResolution.x / columnNum - gapWidth * 2;
@@ -1604,7 +1652,7 @@ void Game::process() {
     }
 }
 
-std::string SerializeProxy::to_string(std::vector <SaveloadObject*> &toSave) {
+std::string Proxy::to_string(std::vector <SaveloadObject*> &toSave) {
     std::stringstream strStream;
     for (int i = 0; i < toSave.size(); ++i) {
         toSave[i]->to_string(strStream);
@@ -1613,7 +1661,7 @@ std::string SerializeProxy::to_string(std::vector <SaveloadObject*> &toSave) {
     return seri;
 }
 
-json SerializeProxy::to_json(std::vector <SaveloadObject*> &toSave) {
+json Proxy::to_json(std::vector <SaveloadObject*> &toSave) {
     json seri;
     for (int i = 0; i < toSave.size(); ++i) {
         seri[i] = toSave[i]->to_json();
@@ -1621,13 +1669,13 @@ json SerializeProxy::to_json(std::vector <SaveloadObject*> &toSave) {
     return seri;
 }
 
-void SerializeProxy::from_string(std::vector <SaveloadObject*> &toLoad, std::stringstream &strStream) {
+void Proxy::from_string(std::vector <SaveloadObject*> &toLoad, std::stringstream &strStream) {
     for (int i = 0; i < toLoad.size(); ++i) {
         toLoad[i] = toLoad[i]->from_string(strStream);
     }
 }
 
-void SerializeProxy::from_json(std::vector <SaveloadObject*> &toLoad, json &deri) {
+void Proxy::from_json(std::vector <SaveloadObject*> &toLoad, json &deri) {
     for (int i = 0; i < toLoad.size(); ++i) {
         toLoad[i] = toLoad[i]->from_json(deri[i]);
     }
@@ -1737,9 +1785,9 @@ void Bonus::checkCollision(DisplayObject *obj)
     if (verI[0].second != verI[1].second) verticalIntersect = verI[2].first - verI[1].first;
     if (horizontalIntersect != -1 && verticalIntersect != -1) {
         if (horizontalIntersect >= verticalIntersect) {
-            EventDispatcher::setGameEvent({EventType::HORIZONTAL_COLLISION, this}); 
+            EventDispatcher::setGameEvent({EventType::BONUS_CATCHED, this}); 
         } else {
-            EventDispatcher::setGameEvent({EventType::VERTICAL_COLLISION, this});
+            EventDispatcher::setGameEvent({EventType::BONUS_CATCHED, this});
         }
         EventDispatcher::setGameEvent({EventType::COLLISION, obj}); 
     }
@@ -1757,7 +1805,7 @@ void Bonus::eventHandler(Event e) {
     case EventType::BONUS_FALL:
         setVisible(false);
         break;
-    case EventType::HORIZONTAL_COLLISION:
+    case EventType::BONUS_CATCHED:
         setVisible(false);
         EventDispatcher::setGameEvent({bonus, nullptr});
         break;

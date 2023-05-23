@@ -1,5 +1,5 @@
 Settings
-	Difficulty 2
+	Difficulty 3
 	Resolution
 		Width 1920
 		Height 1000
@@ -7,12 +7,13 @@ Players
 	PlayersNum 1
 	Player
 		Statistics
-			Lives 3
-			Score 0
-			Time 0.06452
+			Lives 2
+			Score 230
+			Time 77.9773
 			Name Artur
+			BonusesCatched 3
 		Platform
-			X 864
+			X 804
 			Y 980
 			Width 192
 			Height 20
@@ -20,448 +21,204 @@ Players
 		Balls
 			BallsNum 1
 			Ball
-				X 974.915
-				Y 941.694
-				Radius 10
-				XVelocity 6.39437
-				YVelocity -7.68843
+				X 779.897
+				Y 546.56
+				Radius 15
+				XVelocity 8.11721
+				YVelocity 5.84045
 				Visible 1
 Gamefield
-	ObstaclesNum 44
+	ObstaclesNum 24
 	TimersNum 0	Obstacle
-		X 8.72727
-		Y 61.875
-		Width 157.091
-		Height 95
+		X 12
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 252
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 492
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 732
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 972
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1212
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1452
+		Y 65.8333
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1692
+		Y 65.8333
+		Width 216
+		Height 126.667
 		Visible 1
 		BonusesNum 0
 	Obstacle
-		X 183.273
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 102
-			X 183.273
-			Y 61.875
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 357.818
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 12
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 532.364
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 252
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 706.909
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 102
-			X 706.909
-			Y 61.875
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 881.455
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 492
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 1056
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 732
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 1230.55
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 101
-			X 1230.55
-			Y 61.875
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 1405.09
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 972
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 1579.64
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
+		X 1212
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 0
 	Obstacle
-		X 1754.18
-		Y 61.875
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 101
-			X 1754.18
-			Y 61.875
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 8.72727
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 183.273
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
+		X 1452
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 1
 		Bonus
 			Type 101
-			X 183.273
-			Y 180.625
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
+			X 1452
+			Y 854.167
+			Width 216
+			Height 126.667
+			YVelocity 3
+			Visible 0
 	Obstacle
-		X 357.818
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 357.818
-			Y 180.625
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 532.364
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 101
-			X 532.364
-			Y 180.625
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 706.909
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 881.455
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 102
-			X 881.455
-			Y 180.625
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 1056
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1230.55
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 1230.55
-			Y 180.625
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 1405.09
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1579.64
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1754.18
-		Y 180.625
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 8.72727
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 183.273
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 183.273
-			Y 299.375
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 357.818
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 532.364
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 532.364
-			Y 299.375
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 706.909
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 881.455
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1056
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 1056
-			Y 299.375
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 1230.55
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1405.09
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1579.64
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1754.18
-		Y 299.375
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 8.72727
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 183.273
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 357.818
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 101
-			X 357.818
-			Y 418.125
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 532.364
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 105
-			X 532.364
-			Y 418.125
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 706.909
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 881.455
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1056
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1230.55
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 1
-		Bonus
-			Type 102
-			X 1230.55
-			Y 418.125
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
-	Obstacle
-		X 1405.09
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1579.64
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
-		BonusesNum 0
-	Obstacle
-		X 1754.18
-		Y 418.125
-		Width 157.091
-		Height 95
-		Visible 1
+		X 1692
+		Y 224.167
+		Width 216
+		Height 126.667
+		Visible 0
 		BonusesNum 1
 		Bonus
 			Type 104
-			X 1754.18
-			Y 418.125
-			Width 157.091
-			Height 95
-			YVelocity 4
-			Visible 1
+			X 1692
+			Y 854.167
+			Width 216
+			Height 126.667
+			YVelocity 3
+			Visible 0
+	Obstacle
+		X 12
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 252
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 492
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 1
+		Bonus
+			Type 102
+			X 492
+			Y 853.5
+			Width 216
+			Height 126.667
+			YVelocity 3
+			Visible 0
+	Obstacle
+		X 732
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 972
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1212
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1452
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
+	Obstacle
+		X 1692
+		Y 382.5
+		Width 216
+		Height 126.667
+		Visible 0
+		BonusesNum 0
 

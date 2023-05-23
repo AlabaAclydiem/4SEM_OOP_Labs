@@ -31,6 +31,9 @@ enum Resolution {
 
     W7 = 800,
     H7 = 450,
+
+    FW = 1921,
+    FH = 1080,
 };
 
 enum Active {
@@ -56,7 +59,7 @@ enum PlatformSize {
 };
 
 enum BallSize {
-    BS_MEDIUM = 10,
+    BS_MEDIUM = 9,
 };
 
 enum ObstacleNum {
@@ -65,24 +68,30 @@ enum ObstacleNum {
 };
 
 enum Difficulty {
-    DF_HARD = 3,
-    DF_MEDIUM = 2,
+    DF_HARD = 5,
+    DF_HM = 4,
+    DF_MEDIUM = 3,
+    DF_ME = 2,
     DF_EASY = 1,
 };
 
 enum BonusSpeed {
-    BSSP_MEDIUM = 4,
+    BSSP_MEDIUM = 3,
 };
 
 enum PlatformSpeed {
-    PSP_FAST = 12,
+    PSP_FAST = 13,
+    PSP_FM = 11,
     PSP_MEDIUM = 10,
+    PSP_MS = 8,
     PSP_SLOW = 6,
 };
 
 enum BallSpeed {
     BSP_FAST = 110,
+    BSP_FM = 90,
     BSP_MEDIUM = 75,
+    BSP_MS = 60,
     BSP_SLOW = 40,
 };
 
@@ -113,6 +122,7 @@ enum EventType {
     LOSE,
     START,
     BONUS,
+    BONUS_CATCHED,
     PLATFORM_FASTEN_DECLINE,
     PLATFORM_SLOWEN_DECLINE,
     PLATFORM_SHORTEN_DECLINE,
@@ -220,17 +230,19 @@ public:
 
 class Statistics : public SaveloadObject {
 private:
-    int lives, score;
+    int lives, score, catched;
     float delay;
     std::string name;
     sf::Clock* clock;
 public:
-    Statistics(int l, int s, std::string n, float delay);
+    Statistics(int l, int s, int c, std::string n, float delay);
+    int getCatched() { return catched; }
     int getLives();
     int getScore();
     std::string getName();
     float getTime();
     sf::Clock* getClock() { return clock; };
+    void setCatched(int c) { catched = c; }
     void setLives(int num);
     void setScore(int score);
     void setDelay(float d) { delay += d; }
@@ -433,7 +445,7 @@ public:
 
 class Game;
 
-class SerializeProxy {
+class Proxy {
 public:
     std::string to_string(std::vector <SaveloadObject*> &toSave);
     json to_json(std::vector <SaveloadObject*> &toSave);
@@ -442,14 +454,14 @@ public:
 };
 
 class Game {
-    friend class SerializeProxy;
+    friend class Proxy;
 private:
     std::ifstream inFile;
     std::ofstream outFile;
     std::vector <SaveloadObject*> toSave;
     sf::Clock timer;
     Active state;
-    SerializeProxy* history;
+    Proxy* history;
     sf::RenderWindow *window;
     Players *sessionPlayers;
     Menu /** *menu ,*/ *settingsMenu, *pauseMenu; // Change pausenames if all works
